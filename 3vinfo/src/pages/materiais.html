@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <title>Materiais</title>
+  <style>
+    .gradient {
+      background: linear-gradient(90deg, #7e22ce 0%, #3b82f6 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+
+<main class="pt-32 px-6 max-w-7xl mx-auto">
+  <h1 class="text-4xl font-extrabold mb-10 text-center gradient bg-clip-text text-transparent">
+    Materiais da Turma
+  </h1>
+
+  <div class="mb-6 max-w-md mx-auto">
+    <select name="materias" id="materias" class="border border-gray-700 bg-gray-800 text-gray-200 rounded px-4 py-2 w-full">
+      <option value="">Selecione uma disciplina</option>
+      <option value="programacao_banco_dados">Programação com Acesso a Banco de Dados</option>
+      <option value="quimica_1">Química I</option>
+      <option value="autoria_web">Autoria Web</option>
+      <option value="matematica_3">Matemática III</option>
+      <option value="biologia_1">Biologia I</option>
+      <option value="sociologia_3">Sociologia III</option>
+      <option value="filosofia_3">Filosofia III</option>
+      <option value="arquitetura_redes">Arquitetura de Redes</option>
+      <option value="historia_1">História I</option>
+      <option value="organizacao_manutencao_computadores">Organização e Manutenção</option>
+      <option value="portugues_3">Língua Portuguesa e Literatura III</option>
+    </select>
+  </div>
+
+  <div class="text-center space-x-4 mb-8">
+    <button id="btn-sumario" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition">Sumário</button>
+    <button id="btn-apostilas" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition">Apostilas</button>
+    <button id="btn-quiz" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded transition">Questionário</button>
+  </div>
+
+  <section id="content-display" class="max-w-3xl mx-auto bg-gray-800 text-gray-100 rounded-xl shadow-lg p-6 min-h-[200px]">
+  </section>
+</main>
+
+<footer class="bg-black bg-opacity-70 border-t border-gray-700 py-6 mt-20">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-400">
+    <p>© 2025 3VINFOrme-se</p>
+    <div class="flex gap-6 mt-4 md:mt-0">
+      <a href="#" class="hover:text-purple-400 transition">Contato</a>
+      <a href="#" class="hover:text-purple-400 transition">Sobre</a>
+      <a href="#" class="hover:text-purple-400 transition">Redes</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const data = {
+    programacao_banco_dados: {
+      sumario: "Programação com Acesso a Banco de Dados aborda conceitos e práticas para manipular dados.",
+      apostilas: [
+        "https://exemplo.com/programacao/apostila1.pdf",
+        "https://exemplo.com/programacao/apostila2.pdf"
+      ],
+      quiz: [
+        "Qual comando SQL é usado para selecionar dados?",
+        "O que é uma chave primária?"
+      ]
+    },
+    quimica_1: {
+      sumario: "Química I estuda a composição, estrutura e propriedades da matéria.",
+      apostilas: [
+        "https://exemplo.com/quimica/apostila1.pdf",
+        "https://exemplo.com/quimica/apostila2.pdf"
+      ],
+      quiz: [
+        "O que é um elemento químico?",
+        "Qual a diferença entre mistura homogênea e heterogênea?"
+      ]
+    },
+    // Adicione os dados para outras matérias aqui conforme necessário...
+    autoria_web: {
+      sumario: "Autoria Web cobre desenvolvimento e design de páginas web.",
+      apostilas: [
+        "https://exemplo.com/web/apostila1.pdf"
+      ],
+      quiz: [
+        "O que é HTML?",
+        "Para que serve CSS?"
+      ]
+    },
+    matematica_3: {
+      sumario: "Matemática III aborda cálculo e funções avançadas.",
+      apostilas: [
+        "https://exemplo.com/matematica/apostila1.pdf"
+      ],
+      quiz: [
+        "Defina função linear.",
+        "O que é derivada?"
+      ]
+    },
+    biologia_1: {
+      sumario: "A Biologia estuda os seres vivos, suas estruturas, funções e evolução.",
+      apostilas: [
+        "https://exemplo.com/biologia/apostila1.pdf",
+        "https://exemplo.com/biologia/apostila2.pdf"
+      ],
+      quiz: [
+        "Qual é a função do núcleo celular?",
+        "O que é mitose?"
+      ]
+    },
+    sociologia_3: {
+      sumario: "Sociologia III analisa grupos sociais e instituições.",
+      apostilas: [
+        "https://exemplo.com/sociologia/apostila1.pdf"
+      ],
+      quiz: [
+        "O que é um fato social?",
+        "Quem é Émile Durkheim?"
+      ]
+    },
+    filosofia_3: {
+      sumario: "Filosofia III busca entender a existência e o conhecimento.",
+      apostilas: [
+        "https://exemplo.com/filosofia/apostila1.pdf"
+      ],
+      quiz: [
+        "O que é ética segundo Aristóteles?",
+        "O que significa 'penso, logo existo'?"
+      ]
+    },
+    arquitetura_redes: {
+      sumario: "Arquitetura de Redes aborda infraestrutura e protocolos de redes.",
+      apostilas: [
+        "https://exemplo.com/redes/apostila1.pdf"
+      ],
+      quiz: [
+        "O que é um protocolo de rede?",
+        "Qual a função do roteador?"
+      ]
+    },
+    historia_1: {
+      sumario: "História I estuda os principais eventos históricos.",
+      apostilas: [
+        "https://exemplo.com/historia/apostila1.pdf"
+      ],
+      quiz: [
+        "Quando aconteceu a Revolução Francesa?",
+        "Quem foi Dom Pedro I?"
+      ]
+    },
+    organizacao_manutencao_computadores: {
+      sumario: "Organização e Manutenção de Computadores trata hardware e software.",
+      apostilas: [
+        "https://exemplo.com/computadores/apostila1.pdf"
+      ],
+      quiz: [
+        "O que é hardware?",
+        "Para que serve o BIOS?"
+      ]
+    },
+    portugues_3: {
+      sumario: "Língua Portuguesa e Literatura III aborda gramática e interpretação.",
+      apostilas: [
+        "https://exemplo.com/portugues/apostila1.pdf"
+      ],
+      quiz: [
+        "O que é sujeito na oração?",
+        "Explique a figura de linguagem metáfora."
+      ]
+    }
+  };
+
+  const select = document.getElementById('materias');
+  const btnSumario = document.getElementById('btn-sumario');
+  const btnApostilas = document.getElementById('btn-apostilas');
+  const btnQuiz = document.getElementById('btn-quiz');
+  const contentDisplay = document.getElementById('content-display');
+
+  let currentSubject = "";
+
+  select.addEventListener('change', () => {
+    currentSubject = select.value;
+    contentDisplay.innerHTML = ""; // limpa ao mudar
+  });
+
+  btnSumario.addEventListener('click', () => {
+    if (!currentSubject) {
+      alert('Por favor, selecione uma disciplina antes.');
+      return;
+    }
+    contentDisplay.innerHTML = `<h2 class="text-2xl font-semibold mb-4">Sumário</h2>
+      <p>${data[currentSubject].sumario}</p>`;
+  });
+
+  btnApostilas.addEventListener('click', () => {
+    if (!currentSubject) {
+      alert('Por favor, selecione uma disciplina antes.');
+      return;
+    }
+    const apostilas = data[currentSubject].apostilas;
+    if (apostilas.length === 0) {
+      contentDisplay.innerHTML = "<p>Não há apostilas disponíveis para esta disciplina.</p>";
+      return;
+    }
+    const listItems = apostilas.map(link => `<li><a href="${link}" target="_blank" class="text-blue-600 underline">${link}</a></li>`).join("");
+    contentDisplay.innerHTML = `<h2 class="text-2xl font-semibold mb-4">Apostilas</h2>
+      <ul class="list-disc ml-6">${listItems}</ul>`;
+  });
+
+  btnQuiz.addEventListener('click', () => {
+    if (!currentSubject) {
+      alert('Por favor, selecione uma disciplina antes.');
+      return;
+    }
+    const quiz = data[currentSubject].quiz;
+    if (quiz.length === 0) {
+      contentDisplay.innerHTML = "<p>Não há questões disponíveis para esta disciplina.</p>";
+      return;
+    }
+    const questionsList = quiz.map((q, i) => `<li class="mb-2">${q}</li>`).join("");
+    contentDisplay.innerHTML = `<h2 class="text-2xl font-semibold mb-4">Questionário</h2>
+      <ol class="list-decimal ml-6">${questionsList}</ol>`;
+  });
+</script>
+</body>
+</html>
