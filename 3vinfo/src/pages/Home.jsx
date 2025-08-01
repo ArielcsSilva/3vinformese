@@ -1,4 +1,6 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import bg from '../assets/bg.jpg';
 
 export default function Home() {
   return (
@@ -7,7 +9,7 @@ export default function Home() {
       <section
         id="inicio"
         className="relative h-screen bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('./assets/bg.jpg')" }}
+         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative text-center px-4 max-w-3xl">
@@ -35,6 +37,7 @@ export default function Home() {
       <section id="mural" className="min-h-screen bg-gray-900 text-gray-100 px-8 py-20">
         <h3 className="text-4xl font-bold mb-12 text-center">Mural de Avisos</h3>
       </section>
+      <Footer/>
     </>
   );
 }
