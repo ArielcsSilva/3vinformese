@@ -6,11 +6,10 @@ export default function Integrantes(){
   return(
     <div className="bg-gray-900 min-h-screen">
     <Header/>
-      <Titulo titulo="Integrantes"/>
+      
         <main class="pt-32 px-6 max-w-7xl mx-auto">
-          <h1 class="text-4xl font-extrabold mb-10 text-center gradient bg-clip-text text-transparent p-4">
-            Integrantes da Turma
-          </h1>
+
+        <Titulo titulo="Integrantes"/>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           

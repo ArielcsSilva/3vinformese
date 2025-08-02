@@ -1,13 +1,17 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer"
+import Titulo from "../components/Titulo";
 
 export default function Podio(){
   return(
     <div>
       <Header/>
         <main class="pt-32 pb-16 px-4">
+
+          <Titulo titulo="Faça os questionários e suba no pódio!"/>
+
           <section class="text-center max-w-4xl mx-auto mb-12">
-            <h1 class="text-4xl font-extrabold mb-4 gradient bg-clip-text text-transparent">Faça os questionários e suba no pódio!</h1>
+            
             <p class="text-lg text-gray-300 mb-6">Participe da competição e veja sua posição entre os 40 participantes.</p>
             <a href="materiais.html" class="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Acessar Questionários</a>
             <div class="mt-6">

@@ -7,12 +7,9 @@ export default function Materiais(){
    <div className="bg-gray-900 min-h-screen">
     <Header/>
     <main class="pt-32 px-6 max-w-7xl mx-auto">
-      <h1 class="text-4xl font-extrabold mb-10 text-center gradient bg-clip-text text-transparent">
-        Materiais da Turma
-      </h1>
-
-      <div class="mb-6 max-w-md mx-auto">
-        <select name="materias" id="materias" class="border border-gray-700 bg-gray-800 text-gray-200 rounded px-4 py-2 w-full">
+      <Titulo titulo="Materiais da Turma"/>
+      <div className="mb-6 max-w-md mx-auto">
+        <select name="materias" id="materias" className="border border-gray-700 bg-gray-800 text-gray-200 rounded px-4 py-2 w-full">
           <option value="">Selecione uma disciplina</option>
           <option value="programacao_banco_dados">Programação com Acesso a Banco de Dados</option>
           <option value="quimica_1">Química I</option>
@@ -28,7 +25,7 @@ export default function Materiais(){
         </select>
       </div>
 
-      <div class="text-center space-x-4 mb-8">
+      <div className="text-center space-x-4 mb-8">
         <button id="btn-sumario" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition">Sumário</button>
         <button id="btn-apostilas" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition">Apostilas</button>
         <button id="btn-quiz" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded transition">Questionário</button>
@@ -40,7 +37,4 @@ export default function Materiais(){
     <Footer/>
     </div>
   );
-
-
-
 }

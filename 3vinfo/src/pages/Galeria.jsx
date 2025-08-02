@@ -4,7 +4,6 @@ import Footer from "../components/Footer"
 export default function Galeria(){
   return(
     <div class="pt-28 pb-16 px-4">
-        <h1 class="text-3xl font-bold text-center mb-10">Galeria</h1>
 
         <div>
           <p>Volte no tempo e recorde-se dos melhores momentos!</p>

@@ -1,14 +1,15 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer"
+import Titulo from "../components/Titulo";
 
 export default function Mural(){
   return(
     <div className="bg-gray-900 min-h-screen">
     <Header/>
       <main class="pt-28 pb-16 px-4 max-w-md mx-auto">
-
+        <Titulo titulo="Mural de Avisos"/>
         <div class="flex flex-col items-center ">
-          <h1 class="text-4xl font-extrabold mb-4 gradient bg-clip-text text-transparent">Mural de Avisos</h1>  
+          
         </div>
 
         <div class="bg-gray-800 rounded-2xl shadow-xl p-6 border border-purple-700">

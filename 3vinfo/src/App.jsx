@@ -1,9 +1,9 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Integrantes from './pages/integrantes';
+import Integrantes from 'c:/Users/user/Desktop/3vinformese/3vinfo/src/pages/Integrantes';
 import Home from './pages/Home';
-import Materiais from './pages/materiais';
-import Mural from './pages/mural';
-import Podio from './pages/podio';
+import Materiais from 'c:/Users/user/Desktop/3vinformese/3vinfo/src/pages/Materiais';
+import Mural from 'c:/Users/user/Desktop/3vinformese/3vinfo/src/pages/Mural';
+import Podio from 'c:/Users/user/Desktop/3vinformese/3vinfo/src/pages/Podio';
 
 export default function Pages() {
   return (
